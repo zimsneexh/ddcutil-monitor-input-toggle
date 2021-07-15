@@ -2,16 +2,18 @@ import os
 
 def main():
 
-    reader = open(os.path.expanduser('~') + "/.config/ddcutil-monitor-switcher/state.txt")
-    writer = open(os.path.expanduser('~') + "/.config/ddcutil-monitor-switcher/state.txt")
-    state = file.read()
-   
+    reader = open(os.path.expanduser('~') + "/.config/ddcutil-monitor-switcher/state.txt", "r")
+    state = reader.read()
+  
+    print(state)
     
-    if(state == "dp"):
-        os.command("sudo ddcutil setvcp 0x60 0x0f")
+    if("dp" in state):
+        writer = open(os.path.expanduser('~') + "/.config/ddcutil-monitor-switcher/state.txt", "w")
+        os.system("sudo ddcutil setvcp 0x60 0x05")
         writer.write("hdmi")
-    else if(state == "hdmi"):
-        os.command("sudo ddcutil setvcp 0x60 0x0f")
+    elif("hdmi" in state):
+        writer = open(os.path.expanduser('~') + "/.config/ddcutil-monitor-switcher/state.txt", "w")
+        os.system("sudo ddcutil setvcp 0x60 0x0f")
         writer.write("dp")
     else:
         print("Unknown state. Check file!")
