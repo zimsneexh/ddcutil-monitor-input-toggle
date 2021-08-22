@@ -1,5 +1,5 @@
 # ddcutil-monitor-input-toggle
-Toggle your input monitor with ddcutil from Linux
+Toggle your monitors input source with ddcutil from Linux
 
 # Usage:
 Kernel module i2c-dev needs to be loaded in order to interface with the monitor.  
