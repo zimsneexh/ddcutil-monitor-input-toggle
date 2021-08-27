@@ -12,11 +12,11 @@ Note the feature codes, there should be plenty to choose from.
 To set the state of a feature code:     
     ddcutil setvcp 0x** (Replace stars with feature code)
 
-# Get feature code current value:
+# Get a feature code's current value:
 To get the current state of a feature code:  
     ddcutil getvcp 0x** (Replace stars with feature code)
    
-# Find out valid values:
+# Find valid values:
 I'm not exactly sure if finding all valid values is possible via ddcutil,   
 but changing the required feature via the Monitors UI and checking for changes with getvcp   
 worked quite well.
