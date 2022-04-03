@@ -12,7 +12,7 @@ Note the feature codes, there should be plenty to choose from.
 To set the state of a feature code:     
     ddcutil setvcp 0x** (Replace stars with feature code)
 
-# Get a feature code's current value:
+# Get a feature codes current value:
 To get the current state of a feature code:  
     ddcutil getvcp 0x** (Replace stars with feature code)
    
